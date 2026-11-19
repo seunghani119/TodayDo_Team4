@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Todo/:memberId/:todoId"
+  method: DELETE
+  pathVariables:
+    memberId: "6837"
+    todoId: "6837"
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

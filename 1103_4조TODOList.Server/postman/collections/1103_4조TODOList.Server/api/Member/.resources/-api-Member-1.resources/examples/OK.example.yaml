@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Member"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: text/plain
+  body:
+    type: json
+    content: |-
+      {
+        "memberID": 1880,
+        "memberPW": "string",
+        "memberName": "string",
+        "memberDate": "1971-09-27T02:19:11.857Z"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "memberID": 1880,
+        "memberPW": "string",
+        "memberName": "string",
+        "memberDate": "1971-09-27T02:19:11.857Z"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "memberID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberPW": {
+            "type": "string"
+          },
+          "memberName": {
+            "type": "string"
+          },
+          "memberDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+order: 1000

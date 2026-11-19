@@ -1,0 +1,46 @@
+$kind: http-request
+name: /api/Todo/:memberId/:todoId
+description: ""
+url: "{{baseUrl}}/api/Todo/:memberId/:todoId"
+method: DELETE
+pathVariables:
+  - key: memberId
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+  - key: todoId
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/-api-Todo-memberId-todoId-1.resources/examples
+order: 2000

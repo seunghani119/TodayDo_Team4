@@ -1,0 +1,55 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Member"
+  method: GET
+  headers:
+    Accept: text/plain
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "memberID": 5876,
+          "memberPW": "string",
+          "memberName": "string",
+          "memberDate": "1972-04-12T22:10:00.617Z"
+        },
+        {
+          "memberID": 2985,
+          "memberPW": "string",
+          "memberName": "string",
+          "memberDate": "2015-11-20T01:40:28.764Z"
+        }
+      ]
+    $type: |-
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "memberID": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "memberPW": {
+              "type": "string"
+            },
+            "memberName": {
+              "type": "string"
+            },
+            "memberDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+order: 1000

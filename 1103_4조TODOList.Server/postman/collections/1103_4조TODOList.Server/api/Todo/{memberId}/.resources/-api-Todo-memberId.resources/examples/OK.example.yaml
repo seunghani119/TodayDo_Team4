@@ -1,0 +1,80 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Todo/:memberId"
+  method: GET
+  headers:
+    Accept: text/plain
+  pathVariables:
+    memberId: "6837"
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "todoID": 3176,
+          "memberID": 5708,
+          "title": "string",
+          "content": "string",
+          "isCompleted": true,
+          "todoDate": "1980-05-03T02:26:45.026Z",
+          "dueDate": "1981-01-07T20:59:28.049Z",
+          "locationID": 6286
+        },
+        {
+          "todoID": 4655,
+          "memberID": 1965,
+          "title": "string",
+          "content": "string",
+          "isCompleted": true,
+          "todoDate": "1948-10-31T19:03:28.848Z",
+          "dueDate": "1948-11-30T07:48:58.377Z",
+          "locationID": 1507
+        }
+      ]
+    $type: |-
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "todoID": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "memberID": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "isCompleted": {
+              "type": "boolean"
+            },
+            "todoDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "dueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "locationID": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+order: 1000

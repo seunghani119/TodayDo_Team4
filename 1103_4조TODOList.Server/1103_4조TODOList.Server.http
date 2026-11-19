@@ -1,0 +1,6 @@
+@_1103_4조TODOList.Server_HostAddress = http://localhost:5143
+
+GET {{_1103_4조TODOList.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

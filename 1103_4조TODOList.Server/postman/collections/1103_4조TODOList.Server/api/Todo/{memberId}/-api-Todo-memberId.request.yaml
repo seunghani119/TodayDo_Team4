@@ -1,0 +1,31 @@
+$kind: http-request
+name: /api/Todo/:memberId
+description: ""
+url: "{{baseUrl}}/api/Todo/:memberId"
+method: GET
+headers:
+  Accept: text/plain
+pathVariables:
+  - key: memberId
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/-api-Todo-memberId.resources/examples
+order: 1000

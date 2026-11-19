@@ -1,0 +1,13 @@
+$kind: http-request
+name: /api/Location
+description: ""
+url: "{{baseUrl}}/api/Location"
+method: GET
+headers:
+  Accept: text/plain
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/-api-Location.resources/examples
+order: 1000

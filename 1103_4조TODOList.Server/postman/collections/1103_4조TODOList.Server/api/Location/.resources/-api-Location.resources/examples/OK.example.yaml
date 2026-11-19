@@ -1,0 +1,137 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Location"
+  method: GET
+  headers:
+    Accept: text/plain
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "locationID": 3747,
+          "locationName": "string",
+          "nx": 7153,
+          "ny": 3287,
+          "todos": [
+            {
+              "todoID": 8585,
+              "memberID": 9020,
+              "title": "string",
+              "content": "string",
+              "isCompleted": false,
+              "todoDate": "2000-08-13T07:03:44.746Z",
+              "dueDate": "1976-03-18T19:11:49.968Z",
+              "locationID": 2078
+            },
+            {
+              "todoID": 6775,
+              "memberID": 3200,
+              "title": "string",
+              "content": "string",
+              "isCompleted": false,
+              "todoDate": "1951-06-09T11:56:14.241Z",
+              "dueDate": "2006-12-20T15:28:25.190Z",
+              "locationID": 9121
+            }
+          ]
+        },
+        {
+          "locationID": 6465,
+          "locationName": "string",
+          "nx": 7118,
+          "ny": 5389,
+          "todos": [
+            {
+              "todoID": 9425,
+              "memberID": 4535,
+              "title": "string",
+              "content": "string",
+              "isCompleted": false,
+              "todoDate": "1948-10-23T02:34:08.365Z",
+              "dueDate": "2006-11-20T19:18:29.602Z",
+              "locationID": 4571
+            },
+            {
+              "todoID": 7787,
+              "memberID": 8841,
+              "title": "string",
+              "content": "string",
+              "isCompleted": false,
+              "todoDate": "1965-06-04T10:17:29.889Z",
+              "dueDate": "1983-11-23T07:12:47.339Z",
+              "locationID": 6049
+            }
+          ]
+        }
+      ]
+    $type: |-
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "locationID": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "locationName": {
+              "type": "string"
+            },
+            "nx": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "ny": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "todos": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "todoID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "memberID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "isCompleted": {
+                    "type": "boolean"
+                  },
+                  "todoDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "dueDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "locationID": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+order: 1000

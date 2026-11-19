@@ -1,0 +1,31 @@
+$kind: http-request
+name: /api/Location/:id
+description: ""
+url: "{{baseUrl}}/api/Location/:id"
+method: DELETE
+headers:
+  Accept: text/plain
+pathVariables:
+  - key: id
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/-api-Location-id-1.resources/examples
+order: 2000

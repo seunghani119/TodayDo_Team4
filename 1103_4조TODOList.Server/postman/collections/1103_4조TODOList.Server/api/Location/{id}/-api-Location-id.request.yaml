@@ -1,0 +1,118 @@
+$kind: http-request
+name: /api/Location/:id
+description: ""
+url: "{{baseUrl}}/api/Location/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: text/plain
+pathVariables:
+  - key: id
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+      "locationID": 7178,
+      "locationName": "string",
+      "nx": 8796,
+      "ny": 6018,
+      "todos": [
+        {
+          "todoID": 9562,
+          "memberID": 5850,
+          "title": "string",
+          "content": "string",
+          "isCompleted": false,
+          "todoDate": "2011-11-28T13:17:15.963Z",
+          "dueDate": "1973-05-20T22:29:11.209Z",
+          "locationID": 4160
+        },
+        {
+          "todoID": 5645,
+          "memberID": 1939,
+          "title": "string",
+          "content": "string",
+          "isCompleted": true,
+          "todoDate": "1992-08-23T16:56:06.877Z",
+          "dueDate": "1980-08-23T01:43:03.902Z",
+          "locationID": 4888
+        }
+      ]
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "locationID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "locationName": {
+          "type": "string"
+        },
+        "nx": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ny": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "todos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "todoID": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "memberID": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "title": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "isCompleted": {
+                "type": "boolean"
+              },
+              "todoDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "dueDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "locationID": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/-api-Location-id.resources/examples
+order: 1000

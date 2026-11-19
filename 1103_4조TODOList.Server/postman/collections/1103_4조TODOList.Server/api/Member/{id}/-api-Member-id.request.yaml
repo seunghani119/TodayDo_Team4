@@ -1,0 +1,58 @@
+$kind: http-request
+name: /api/Member/:id
+description: ""
+url: "{{baseUrl}}/api/Member/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: text/plain
+pathVariables:
+  - key: id
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+      "memberID": 1880,
+      "memberPW": "string",
+      "memberName": "string",
+      "memberDate": "1971-09-27T02:19:11.857Z"
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "memberID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "memberPW": {
+          "type": "string"
+        },
+        "memberName": {
+          "type": "string"
+        },
+        "memberDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/-api-Member-id.resources/examples
+order: 1000

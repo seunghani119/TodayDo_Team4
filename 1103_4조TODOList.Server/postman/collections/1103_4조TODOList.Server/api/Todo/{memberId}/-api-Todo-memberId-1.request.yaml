@@ -1,0 +1,77 @@
+$kind: http-request
+name: /api/Todo/:memberId
+description: ""
+url: "{{baseUrl}}/api/Todo/:memberId"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: text/plain
+pathVariables:
+  - key: memberId
+    value: "6837"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+      "todoID": 6689,
+      "memberID": 7290,
+      "title": "string",
+      "content": "string",
+      "isCompleted": true,
+      "todoDate": "1989-06-06T05:33:57.847Z",
+      "dueDate": "1976-09-06T15:34:00.868Z",
+      "locationID": 7036
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "todoID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "memberID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "isCompleted": {
+          "type": "boolean"
+        },
+        "todoDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "locationID": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/-api-Todo-memberId-1.resources/examples
+order: 2000

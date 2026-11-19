@@ -1,0 +1,46 @@
+﻿<Window x:Class="TODOList.Client.MapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="활동 지역 선택"
+        Width="900"
+        Height="650"
+        MinWidth="650"
+        MinHeight="480"
+        WindowStartupLocation="CenterOwner"
+        Background="WhiteSmoke"
+        FontFamily="맑은 고딕"
+        Loaded="MapWindow_Loaded"
+        Closed="MapWindow_Closed">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="0,0,0,14">
+            <TextBlock Text="지도에서 활동 위치를 선택하세요" FontSize="22" FontWeight="Bold" Foreground="DarkSlateBlue"/>
+
+            <TextBlock Text="장소를 검색흐ㅏㄱ나 지도에서 원하는 곳을 클릭한 뒤 선택 버튼을 눌러 주세요." Foreground="SlateGray" Margin="0,7,0,0"/>
+        </StackPanel>
+
+        <wv2:WebView2 x:Name="MapBrowser" Grid.Row="1"/>
+
+        <Grid Grid.Row="2" Margin="0,14,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="MapMessage" Text="지도를 준비하고 있습니다." Foreground="SlateGray" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,14,0"/>
+
+            <Button x:Name="ConfirmLocationButton" Grid.Column="1" Content="이 위치 선택" IsEnabled="False" Background="SlateBlue" Foreground="White" Padding="16,10" Margin="0,0,8,0" Click="ConfirmLocationButton_Click"/>
+
+            <Button Grid.Column="2" Content="취소" Padding="16,10" Click="CancelButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

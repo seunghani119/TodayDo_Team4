@@ -1,0 +1,9 @@
+workspace:
+  id: 52a63a98-3b05-46d5-8756-63450ff410ee
+
+localResources:
+  specs:
+    - ../postman/specs/1103_4조TODOList.Server/index.json
+resourceNameMappings:
+  specs:
+    - ../postman/specs/1103_4조TODOList.Server/index.json: 1103_4조TODOList.Server

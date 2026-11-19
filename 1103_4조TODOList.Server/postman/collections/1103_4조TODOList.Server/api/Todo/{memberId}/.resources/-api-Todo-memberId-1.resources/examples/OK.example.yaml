@@ -1,0 +1,76 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/Todo/:memberId"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: text/plain
+  pathVariables:
+    memberId: "6837"
+  body:
+    type: json
+    content: |-
+      {
+        "todoID": 6689,
+        "memberID": 7290,
+        "title": "string",
+        "content": "string",
+        "isCompleted": true,
+        "todoDate": "1989-06-06T05:33:57.847Z",
+        "dueDate": "1976-09-06T15:34:00.868Z",
+        "locationID": 7036
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "todoID": 6689,
+        "memberID": 7290,
+        "title": "string",
+        "content": "string",
+        "isCompleted": true,
+        "todoDate": "1989-06-06T05:33:57.847Z",
+        "dueDate": "1976-09-06T15:34:00.868Z",
+        "locationID": 7036
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "todoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "isCompleted": {
+            "type": "boolean"
+          },
+          "todoDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locationID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+order: 1000
