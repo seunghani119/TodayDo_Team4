@@ -370,3 +370,4 @@ appsettings.json
 .validation-artifacts/
 docs/
 TEST_RESULTS.md/
+TEST_RESULTS.md
